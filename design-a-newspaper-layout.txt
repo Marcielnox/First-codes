@@ -1,0 +1,93 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>Newspaper Layout</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main class="newspaper-layout">
+    <header class="title">
+      <h1>Fiora Times</h1>
+    </header>
+    <article class="feature-article">
+      <h2>The Gods Descend</h2>
+      <p>The sibling gods have come down to the world and seem deadset on ending it. In this section we will show you how to survive and stay out of sight and hope for the best. When all else fails just surrender and hope for mercy by being allowed to join their ranks.</p>
+    </article>
+    <article class="small-article1">
+      <h3>Theres a hag in my cellar</h3>
+      <p>Local woman tells us how a hag has taken residence in her home and refuses to leave.</p>
+    </article>
+    <article class="small-article2">
+      <h3>I married a lycanthrope</h3>
+      <p>Exclusive interview with a noble currently in a relationship with a wererat.</p>
+    </article>
+    <article class="small-article3">
+      <h3>New spell contest</h3>
+      <p>A local university for mages is hosting a 'most creative spell' contest, all applicants are welcomed. More rules on their website.</p>
+    </article>
+    <article class="secondary-article">
+      <h2>Where are the heroes?</h2>
+      <p>The pathfinders are still missing, a brightlight was seen in Cor Hydrae the day of their dissapearance. There are many speculations and no real answers. Read more theories below on where they could possibly be.</p>
+    </article>
+    <figure class="cover-image">
+      <img src="https://media.istockphoto.com/id/1492982275/vector/red-missing-stamp.jpg?s=612x612&w=0&k=20&c=Ceo2tHJfAbL24gPlsnWVogpVC5aqSrs7nM0x7Q2xf1w=" alt="missing">
+    </figure>  
+  </main>
+
+</body>
+
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+body {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f0f0f0;
+}   
+.newspaper-layout {
+  display: grid;
+  grid-template-areas:
+  "title title title"
+  "feature-article feature-article cover-image"
+  "secondary-article secondary-article cover-image"
+  "small-article1 small-article2 small-article3";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr 1fr;
+  gap: 10px;
+}
+.title {
+  grid-area: title;
+}
+.feature-article {
+  grid-area: feature-article;
+}
+.cover-image {
+  grid-area: cover-image;
+}
+.secondary-article {
+  grid-area: secondary-article;
+}
+.small-article1 {
+  grid-area: small-article1;
+}
+.small-article2 {
+  grid-area: small-article2;
+}
+.small-article3 {
+  grid-area: small-article3;
+}
+.cover-image img {
+  max-width: 100%;
+}
+
+** end of styles.css **
+
